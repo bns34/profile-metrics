@@ -40,3 +40,6 @@ jobs:
           commits_authoring: "Salty-Coder, bns34, 59771980+Salty-Coder@users.noreply.github.com, 59771980+bns34@users.noreply.github.com"
           plugin_languages_analysis_timeout: 120
           plugin_languages_analysis_timeout_repositories: 40
+
+          debug: yes
+          debug_flags: languages
