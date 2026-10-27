@@ -11,6 +11,13 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Prepare metrics image
+        run: |
+          docker pull ghcr.io/yuanweize/metrics-community:latest
+          docker tag \
+            ghcr.io/yuanweize/metrics-community:latest \
+            ghcr.io/eur-un/metrics-community:latest
+            
       - name: Run LowLighter metrics
         uses: EUR-UN/metrics-community@ed4c3ca6bbd7fafaa2e644c88ae141b67edfd00c
         with:
