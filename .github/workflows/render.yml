@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:
       - name: Run LowLighter metrics
-        uses: bns34/lowlighter-metrics@master
+        uses: EUR-UN/metrics-community@ed4c3ca6bbd7fafaa2e644c88ae141b67edfd00c
         with:
           # Your GitHub token
           # The following scopes are required:
