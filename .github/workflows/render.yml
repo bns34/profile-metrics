@@ -37,17 +37,16 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/London
           repositories_skipped: profile-metrics, MessageLoggerV2-fixed, UCS-7.4.0, LegacyClashServer, pogo-s2, NitroSniper, BTRoblox-DevEx-old, BTRoblox-DevEx, salty-site-status, github-stats-transparent, Cadburys-Bypass, BetterDiscordAddons, RoCAT, AiSponge, RemovedConnectionAlerts, sponge-ai, discord-token-generator, discord-nitro-sniper, bloxflip-predictor-patched, Rock-Paper-Scissors, Discord-Exploit-Collection, PreMiD-Activities, lowlighter-metrics 
-          repositories_batch: 10
+          repositories_batch: 10 # Fixes GraphQL timeout which was causing it to show only 1 commit
           plugin_languages: yes
           plugin_languages_colors: github
-          plugin_languages_limit: 8
+          plugin_languages_limit: 8 # Max is 8
           plugin_languages_other: false
           plugin_languages_sections: most-used
 
           plugin_languages_indepth: yes
           commits_authoring: "Salty-Coder, bns34, 59771980+Salty-Coder@users.noreply.github.com, 59771980+bns34@users.noreply.github.com"
-          plugin_languages_analysis_timeout: 120
-          plugin_languages_analysis_timeout_repositories: 40
+          plugin_languages_analysis_timeout: 60 # 60 is the max
+          plugin_languages_analysis_timeout_repositories: 15 # 15 is the max
 
-          debug: yes
-          debug_flags: languages
+          debug: yes # Extra debug output in the logs
